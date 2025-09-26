@@ -1,5 +1,5 @@
-# NHIT_Notification_Service
-NHIT Backend 
+# ERP_Notification_Service
+ERP Backend 
 
 * Event 1: Signup Verification (Step 3)
 
