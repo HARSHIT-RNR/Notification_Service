@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{.subject}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .footer { margin-top: 20px; font-size: 0.8em; color: #7f8c8d; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Your {{.app_name}} Account is Being Prepared!</h1>
+        <p>Hello {{.admin_name}},</p>
+        <p>Thank you for your patience. We have started the provisioning process for your new tenant, <strong>{{.org_name}}</strong>. This may take a few minutes.</p>
+        <p>We will send another email as soon as your environment is ready. No action is needed from you at this time.</p>
+        <div class="footer">
+            <p>Need help? Contact <a href="mailto:{{.support_email}}">{{.support_email}}</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "description": "Sent to the user with a secure link to set their initial password.",
+  "variables": {
+    "required": ["admin_name", "app_name", "setup_url"],
+    "optional": ["support_email"]
+  },
+  "defaults": {
+    "app_name": "ERP",
+    "support_email": "admin@newco.com"
+  }
+}

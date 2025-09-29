@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{.subject}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .footer { margin-top: 20px; font-size: 0.8em; color: #7f8c8d; }
+        .token-box { font-size: 20px; font-weight: bold; color: #333; letter-spacing: 2px; background-color: #f5f5f5; padding: 15px; border-radius: 4px; text-align: center; margin: 20px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Welcome to {{.app_name}}!</h1>
+        <p>Hello {{.admin_name}},</p>
+        <p>Thanks for signing up. Please use the following token to complete your registration:</p>
+        <div class="token-box">{{.verification_token}}</div>
+        <p>If you have any questions, feel free to reach out.</p>
+        <div class="footer">
+            <p>Need help? Contact <a href="mailto:{{.support_email}}">{{.support_email}}</a></p>
+        </div>
+    </div>
+</body>
+</html>

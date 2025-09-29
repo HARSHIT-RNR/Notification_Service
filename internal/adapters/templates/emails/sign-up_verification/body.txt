@@ -1,0 +1,9 @@
+Welcome to {{.app_name}}, {{.admin_name}}!
+
+Thanks for signing up. Please use the following token to complete your registration:
+
+{{.verification_token}}
+
+If you have any questions, feel free to reach out.
+
+Need help? Contact {{.support_email}}

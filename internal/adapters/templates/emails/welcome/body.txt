@@ -1,0 +1,10 @@
+Thank You from {{.app_name}}, {{.admin_name}}!
+
+We're thrilled to have you on board! Your new {{.app_name}} environment is fully configured and ready for you to use.
+
+You can log in here:
+{{.login_url}}
+
+If you have any questions or feedback, feel free to reach out.
+
+Need help? Contact {{.support_email}}

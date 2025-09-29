@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{.subject}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .footer { margin-top: 20px; font-size: 0.8em; color: #7f8c8d; }
+        .button { display: inline-block; padding: 10px 20px; background-color: #2ecc71; color: white !important; text-decoration: none; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Thank You from {{.app_name}}!</h1>
+        <p>Hello {{.admin_name}},</p>
+        <p>We're thrilled to have you on board! Your new {{.app_name}} environment is fully configured and ready for you to use.</p>
+        <p><a href="{{.login_url}}" class="button">Go to Your Dashboard</a></p>
+        <p style="font-size: 0.9em; color: #777;">Or copy this link into your browser:<br>{{.login_url}}</p>
+        <p>If you have any questions or feedback, feel free to reach out.</p>
+        <div class="footer">
+            <p>Need help? Contact <a href="mailto:{{.support_email}}">{{.support_email}}</a></p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "description": "Sent to a new user to verify their email address with a token.",
+  "variables": {
+    "required": ["admin_name", "app_name", "verification_token"],
+    "optional": ["support_email"]
+  },
+  "defaults": {
+    "app_name": "ERP",
+    "support_email": "admin@newco.com"
+  }
+}

@@ -1,0 +1,1 @@
+We're preparing your {{.app_name}} account, {{.admin_name}}!

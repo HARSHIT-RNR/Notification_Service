@@ -1,0 +1,11 @@
+{
+  "description": "Informs the user that their tenant provisioning has begun.",
+  "variables": {
+    "required": ["admin_name", "app_name", "org_name"],
+    "optional": ["support_email"]
+  },
+  "defaults": {
+    "app_name": "ERP",
+    "support_email": "admin@newco.com"
+  }
+}

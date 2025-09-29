@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{.subject}}</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .header { color: #2c3e50; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        .footer { margin-top: 20px; font-size: 0.8em; color: #7f8c8d; }
+        .button { display: inline-block; padding: 10px 20px; background-color: #3498db; color: white !important; text-decoration: none; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Set Your Password for {{.app_name}}!</h1>
+        <p>Hello {{.admin_name}},</p>
+        <p>Your account is ready. To get started, please set your password by clicking the button below. For your security, this link will expire in one hour.</p>
+        <p><a href="{{.setup_url}}" class="button">Set Your Password</a></p>
+        <p style="font-size: 0.9em; color: #777;">If the button doesn't work, copy and paste this link into your browser:<br>{{.setup_url}}</p>
+        <div class="footer">
+            <p>Need help? Contact <a href="mailto:{{.support_email}}">{{.support_email}}</a></p>
+        </div>
+    </div>
+</body>
+</html>

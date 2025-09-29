@@ -1,0 +1,9 @@
+Set Your Password for {{.app_name}}, {{.admin_name}}!
+
+Your account is ready. To get started, please use the following link to set your password. For your security, this link will expire in one hour.
+
+{{.setup_url}}
+
+If you have any questions, feel free to reach out.
+
+Need help? Contact {{.support_email}}

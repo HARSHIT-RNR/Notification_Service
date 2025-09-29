@@ -1,0 +1,7 @@
+Your {{.app_name}} Account is Being Prepared, {{.admin_name}}!
+
+Thank you for your patience. We have started the provisioning process for your new tenant, {{.org_name}}. This may take a few minutes.
+
+We will send another email as soon as your environment is ready. No action is needed from you at this time.
+
+Need help? Contact {{.support_email}}

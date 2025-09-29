@@ -1,0 +1,1 @@
+Verify Your Email for {{.app_name}}, {{.admin_name}}!
