@@ -1,5 +1,5 @@
 -- name: CreateNotificationLog :exec
-INSERT INTO notification_logs (
+INSERT INTO notification_mails (
     recipient,
     template_name,
     status,

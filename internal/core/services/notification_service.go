@@ -7,11 +7,14 @@ import (
 	"time"
 
 	"notification-service/internal/adapters/database/db"
-	"notification-service/internal/adapters/mailme"
 	"notification-service/internal/core/repository"
 
 	"github.com/sirupsen/logrus"
 )
+
+type Mailer interface {
+	Mail(to, subject, html, text string, data map[string]interface{}) error
+}
 
 type SendRequest struct {
 	To           string
@@ -22,14 +25,14 @@ type SendRequest struct {
 type NotificationService struct {
 	templateRepo repository.TemplateRepository
 	logRepo      repository.NotificationLogRepository
-	mailer       *mailme.Mailer
+	mailer       Mailer
 	logger       *logrus.Logger
 }
 
 func NewNotificationService(
 	templateRepo repository.TemplateRepository,
 	logRepo repository.NotificationLogRepository,
-	mailer *mailme.Mailer,
+	mailer Mailer,
 	logger *logrus.Logger,
 ) *NotificationService {
 	return &NotificationService{
@@ -55,10 +58,9 @@ func (s *NotificationService) SendNotification(ctx context.Context, req SendRequ
 
 	// The mailer's Mail function handles subject/body parsing
 	err = s.mailer.Mail(req.To, template.Subject, template.BodyHTML, template.BodyText, req.Data)
-
 	if err != nil {
 		log.WithError(err).Error("Failed to send notification")
-		s.logAttempt(ctx, req, "failed", err.Error())
+		s.logAttempt(ctx, req, "failed", "failed to send email via SMTP: "+err.Error())
 		return
 	}
 

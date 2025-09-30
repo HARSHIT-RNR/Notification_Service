@@ -1,11 +1,11 @@
 {
   "description": "Welcomes the user after their account is fully set up and provides a link to the login page.",
   "variables": {
-    "required": ["admin_name", "app_name", "login_url"],
+    "required": ["user_name", "app_name", "login_url"],
     "optional": ["support_email"]
   },
   "defaults": {
-    "app_name": "ERP",
+    "user_name": "ERP",
     "support_email": "admin@newco.com"
   }
 }

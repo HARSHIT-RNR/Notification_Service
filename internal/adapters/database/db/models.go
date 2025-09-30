@@ -10,7 +10,7 @@ import (
 	"time"
 )
 
-type NotificationLog struct {
+type NotificationMail struct {
 	ID           int32
 	Recipient    string
 	TemplateName string

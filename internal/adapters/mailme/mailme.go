@@ -53,13 +53,13 @@ func (m *Mailer) Mail(to, subjectTemplate, htmlTemplate, textTemplate string, da
 	msg.SetHeader("From", m.From)
 	msg.SetHeader("To", to)
 	msg.SetHeader("Subject", subject)
+	// This sets the primary body to be the rendered HTML
 	msg.SetBody("text/html", htmlBody)
 
-	// 4. Render and add Plain Text Body (optional)
+	// 4. Render and add Plain Text Body as an alternative
 	if textTemplate != "" {
 		textBody, err := m.render("text", textTemplate, data)
 		if err != nil {
-			// Log a warning but don't fail the entire send, as HTML is the primary part.
 			log.WithError(err).Warn("failed to render plain text template, sending HTML only")
 		} else {
 			msg.AddAlternative("text/plain", textBody)

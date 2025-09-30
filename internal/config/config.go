@@ -47,10 +47,10 @@ func LoadConfig() *Config {
 	// Construct the database source string from individual env vars
 	dbSource := fmt.Sprintf("postgresql://%s:%s@%s:%s/%s?sslmode=%s",
 		getEnv("DB_USER", "postgres"),
-		getEnv("DB_PASSWORD", "password"),
+		getEnv("DB_PASSWORD", "2120"),
 		getEnv("DB_HOST", "localhost"),
 		getEnv("DB_PORT", "5432"),
-		getEnv("DB_NAME", "notifications"),
+		getEnv("DB_NAME", "notification_mails"),
 		getEnv("DB_SSL_MODE", "disable"),
 	)
 

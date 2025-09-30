@@ -1,1 +1,1 @@
-Welcome to {{.app_name}}, {{.admin_name}}!
+Welcome to {{.app_name}}, {{.user_name}}!
